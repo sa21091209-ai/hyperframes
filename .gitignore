@@ -129,6 +129,10 @@ packages/studio/data/
 !.claude/skills/seam-craft
 !.claude/skills/captions-overlay
 !.claude/skills/oversized-cursor
+!.claude/skills/smart-task-router
+!.claude/agents
+.claude/agents/*
+!.claude/agents/router-*.md
 
 .agents/*
 !.agents/skills
