@@ -1,0 +1,14 @@
+# Dependencies & build output
+node_modules/
+dist/
+*.tsbuildinfo
+coverage/
+
+# Generated / media (not useful for the code graph)
+docs/images/
+videos/
+assets/
+releases/
+
+# Lockfiles
+bun.lock
