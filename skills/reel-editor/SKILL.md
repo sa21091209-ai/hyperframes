@@ -1,9 +1,9 @@
 ---
-name: video-ad-editor
+name: reel-editor
 description: Turn a talking-head video into a 9:16 reel or ad — cut the silences, add word-timed Arabic captions, and layer motion graphics in the brand's colors; mobile-first, runs from a phone chat. Trigger on "منتج هذا المقطع", "سو من هذا الفيديو إعلان", "شيّل السكتات", "حوّل الفيديو لريل", "ركّب كابشن عربي", "اقص الصمت", or a talking-head video attached with an edit request. Not for carousels or video covers alone. Plain captions only → /embedded-captions; graphic overlays only → /talking-head-recut. Unclear → /hyperframes.
 ---
 
-# Video Ad Editor
+# Reel Editor (محرّر الريل)
 
 Talking-head video in, one publish-ready 9:16 MP4 out (plus `.srt` and a transcript `.txt`). The edit is all code: `ffmpeg` cuts, `whisper` transcribes with word timing, and HyperFrames renders the captions and motion graphics over the footage.
 
@@ -136,3 +136,7 @@ The cover is the first frame of every video:
 - **Two-logo comparison** (✕ old, ✓ new) only when the story is "from X to Y": a row at the top of the square with the head below.
 - Put the cover in the first 0.1 s of the video; that file is the deliverable.
 - Show a preview at 9:16, 4:5 and 1:1 side by side and confirm nothing is cropped at 1:1.
+
+## Tools archive
+
+`tools/` keeps the source files of the standalone package this skill was derived from (motion engine pieces, reference notes, sibling skill instructions, onboarding page). See `tools/NOTICE.md` for what is and is not included. Treat it as source material: it does not run inside HyperFrames as is.

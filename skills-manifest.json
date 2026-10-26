@@ -73,6 +73,10 @@
       "hash": "14d03406b4fc6904",
       "files": 37
     },
+    "reel-editor": {
+      "hash": "76f3ac76950b26b2",
+      "files": 27
+    },
     "remotion-to-hyperframes": {
       "hash": "d02be65b7f3f4a63",
       "files": 77
@@ -84,10 +88,6 @@
     "talking-head-recut": {
       "hash": "4b2cf6d7b6e336b4",
       "files": 28
-    },
-    "video-ad-editor": {
-      "hash": "4a71b8922c3642aa",
-      "files": 1
     }
   }
 }
