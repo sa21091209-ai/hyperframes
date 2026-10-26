@@ -18,8 +18,8 @@
       "files": 6
     },
     "hyperframes": {
-      "hash": "6c3f074a2d44e4cd",
-      "files": 31
+      "hash": "4ddd83cbc2ddcd58",
+      "files": 32
     },
     "hyperframes-animation": {
       "hash": "a5d09375a50f71c8",
@@ -72,6 +72,10 @@
     "product-launch-video": {
       "hash": "14d03406b4fc6904",
       "files": 37
+    },
+    "reel-editor": {
+      "hash": "76f3ac76950b26b2",
+      "files": 27
     },
     "remotion-to-hyperframes": {
       "hash": "d02be65b7f3f4a63",

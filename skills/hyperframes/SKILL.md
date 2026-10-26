@@ -59,18 +59,19 @@ The probe is read-only and reports the pin against the latest release; keep the 
 
 Use the first matching row. Match the requested **deliverable**, not a word or file type mentioned in passing.
 
-| Priority | Request                                                                                                            | Workflow                   |
-| -------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------- |
-| 1        | Explicitly port an existing Remotion source                                                                        | `/remotion-to-hyperframes` |
-| 2        | Author a presentation, pitch deck, or navigable interactive deck                                                   | `/slideshow`               |
-| 3        | Add plain captions or subtitles to existing talking-head footage without changing it                               | `/embedded-captions`       |
-| 4        | Add designed graphic overlays to existing talking-head, interview, or podcast footage without changing the footage | `/talking-head-recut`      |
-| 5        | Build a beat-synced video from a music track, with no narration or website capture                                 | `/music-to-video`          |
-| 6        | Create an explicitly short, unnarrated, motion-first unit, typically under 10s                                     | `/motion-graphics`         |
-| 7        | Explain a GitHub pull request or code change from a PR reference                                                   | `/pr-to-video`             |
-| 8        | Market or showcase a website, product site, app, or company from a URL or site-specific brief                      | `/product-launch-video`    |
-| 9        | Explain a topic, article, or notes with invented visuals and no product or site capture                            | `/faceless-explainer`      |
-| 10       | Any other custom video or composition                                                                              | `/general-video`           |
+| Priority | Request                                                                                                               | Workflow                   |
+| -------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| 1        | Explicitly port an existing Remotion source                                                                           | `/remotion-to-hyperframes` |
+| 2        | Author a presentation, pitch deck, or navigable interactive deck                                                      | `/slideshow`               |
+| 3        | Turn talking-head footage into a vertical reel or ad: cut silences, add captions and graphics (the footage is edited) | `/reel-editor`             |
+| 4        | Add plain captions or subtitles to existing talking-head footage without changing it                                  | `/embedded-captions`       |
+| 5        | Add designed graphic overlays to existing talking-head, interview, or podcast footage without changing the footage    | `/talking-head-recut`      |
+| 6        | Build a beat-synced video from a music track, with no narration or website capture                                    | `/music-to-video`          |
+| 7        | Create an explicitly short, unnarrated, motion-first unit, typically under 10s                                        | `/motion-graphics`         |
+| 8        | Explain a GitHub pull request or code change from a PR reference                                                      | `/pr-to-video`             |
+| 9        | Market or showcase a website, product site, app, or company from a URL or site-specific brief                         | `/product-launch-video`    |
+| 10       | Explain a topic, article, or notes with invented visuals and no product or site capture                               | `/faceless-explainer`      |
+| 11       | Any other custom video or composition                                                                                 | `/general-video`           |
 
 Before finalizing the route, read `references/routes/<workflow>.md` — one small file per route: the canonical input/output/trigger contract (available before lazy-installed workflow skills are present) plus that route's interview entry. If the candidate does not satisfy its contract, continue routing instead of forcing the match. Read only the matched route's file.
 
@@ -78,7 +79,7 @@ Before finalizing the route, read `references/routes/<workflow>.md` — one smal
 
 - A short animated title, logo sting, stat hit, chart hit, map hit, or standalone lower-third is `/motion-graphics` when it is unnarrated and motion is the message. A static title card, narrated sequence, longer montage, or custom loop is `/general-video`.
 - An explicitly short motion graphic may use a URL, tweet, article, or screenshot as source material. A generic "make a video from this site" request is `/product-launch-video`.
-- Existing footage with captions routes to `/embedded-captions`; footage with designed information cards routes to `/talking-head-recut`. Retiming, reordering, recoloring, reframing, or remixing footage is a custom edit and falls through to `/general-video`.
+- Existing footage with captions routes to `/embedded-captions`; footage with designed information cards routes to `/talking-head-recut`. Cutting silences and packaging footage as a vertical reel routes to `/reel-editor`; any other retiming, reordering, recoloring, reframing, or remixing of footage is a custom edit and falls through to `/general-video`.
 - A music file selects `/music-to-video` only when its beat grid drives the piece. Music used as a bed does not override the subject-matched route.
 - "I want a storyboard" changes the review process, not the workflow. With no other routing signal, use `/general-video`. A confirmed board (`boards/storyboard.html`, format in `/hyperframes-creative` `references/storyboard-recipe.md`) may itself be the requested deliverable; the review loop defines that stop point.
 - Specialized narrative workflows support up to about 3 minutes and are strongest around 30–90s. Route a clearly longer piece to `/general-video`. Length never overrides an explicit port, deck, caption, overlay, or music-driven deliverable.
